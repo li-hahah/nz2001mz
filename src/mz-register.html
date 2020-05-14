@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="">
+        <div class="logo-wrapper">
+            <h1 class="float_left"><a href="./mz-index.html"></a></h1>
+        </div>
+    </header>
+    <!-- banner-box -->
+    <div id="banner">
+        <div class="main_form">
+            <div class="table_title">
+                <a href="#" class="linkABlue" id="toAccountLogin">
+                    注册flyme账号
+                </a>
+            </div>
+            <div class="tip_box visibility-hidden">
+                <i class="err_icon"></i>
+                <span class="tip_font"></span>
+                <span class="close_icon"></span>
+            </div>
+            <div class="txt_box visibility-hidden">
+                <span class="">我们已发送一条验证码至 </span>
+                <span id="phoneNum" style="display:inline-block;"></span>
+                <span class="">，请输入短信中的验证码</span>
+            </div>
+            <div class="normalInput username">
+                <input type="text" placeholder="手机号码" maxlength="50" id="userphone" class="userphone">
+                <span class="no hide">
+                    <i class="iconfont iconcha"></i>
+                </span>
+                <span class="yes hide">
+                    <i class="iconfont icongou"></i>
+                </span>
+            </div>
+            <div class="normalInput password">
+                <input type="text" placeholder="密码" maxlength="50" id="userpass" class="userpass">
+                <span class="no hide">
+                    <i class="iconfont iconcha"></i>
+                </span>
+                <span class="yes hide">
+                    <i class="iconfont icongou"></i>
+                </span>
+            </div>
+            <div class="rememberField" style="font-size:12px">
+                <span class="checkboxPic mzchkbox check_unchk">
+                    <i class="i_icon"></i>
+                </span>
+                <label for="" class="pointer" tabindex="0">注册账号即表示您同意并愿意遵守</label>
+                <a href="#" class="linkABlue" target="_blank">Flyme账号服务协议</a>
+                <label for="" class="pointer">、</label>
+                <a href="#" class="linkABlue" target="_blank">法律声明</a>
+                <label for="" class="pointer">和</label>
+                <a href="#" class="linkABlue" target="_blank">隐私政策</a>
+            </div>
+            <a href="#" id="registerBtn" class="fullBtnBlue registerBtn">立即注册</a>
+            <div class="transferField clearfix">
+                <a href="./mz-login.html" target="_blank" class="goRegister linkABlue">登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer-wrap">
+            <div class="footerInner">
+                <div class="footer-layer">
+                    <div class="footer-inner float_left">
+                        <a href="#" target="_blank" title="关于魅族">关于魅族</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <a href="#" target="_blank" title="工作机会">工作机会</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <a href="#" target="_blank" title="联系我们">联系我们</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <a href="#" target="_blank" title="法律声明">法律声明</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <a href="#" target="_blank" title="常见问题">常见问题</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <div class="footer_language" title="简体中文">
+                            简体中文&nbsp;&nbsp;&nbsp;
+                            <div class="footer_language_menu">
+                                <a href="#" title="简体中文" class="checked">简体中文</a>
+                                <a href="#" title="English" class="ClobalItem">English</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-service float_left">
+                        <span class="service_label">客服热线</span>
+                        <span class="service_num">400-788-3333</span>
+                        <a href="#" class="service_online" title="在线客服">在线客服</a>
+                    </div>
+                    <div class="footer-outerLink float_right">
+                        <a href="#" class="foot_sina">
+                            <i class="i_icon"></i>
+                        </a>
+                        <a href="#" class="foot_wechat">
+                            <i class="i_icon"></i>
+                            
+                        </a>
+                        <img src="img/weixin.png" alt="">
+                        <a href="#" class="foot_qzone">
+                            <i class="i_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="flymeCopy">
+                    <div class="flymeInner">
+                        <span>
+                            &copy;2020 Meizu Telecom Equipment Co., Ltd. All rights reserved.
+                        </span>
+                        <a href="#" class="linkAGray">备案号: 粤ICP备13003602号-4</a>
+                        <a href="#" class="linkAGray">经营许可证编号: 粤B2-20130198</a>
+                        <a href="#" class="linkAGray">营业执照</a>
+                        <a href="#" class="linkAGray aa">粤公网安备 44049102496076号</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- tips -->
+    <div class="mz-mask hide">
+        <div class="mz-dialog dialog">
+            <div class="mz-dialog-header">
+                <div class="mz-dialog-title">提示</div>
+                <div class="mz-dialog-close"></div>
+            </div>
+            <div class="mz-dialog-img">
+                <div class="dialog-img">
+                    <i class="iconfont icongou"></i>
+                </div>
+            </div>
+            <div class="mz-dialog-main">
+                <div class="mz-dialog-wrap">
+                    <div class="mz-dialog-content">恭喜您注册成功，去<a href="./mz-login.html" class="linkABlue">登录</a>吧
+                        <em>5</em>秒后自动转跳</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./js/jquery.js"></script>
+<script src="./js/register/register.js"></script>

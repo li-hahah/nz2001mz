@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/shopcart.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="clearfix " id="h">
+        <div class="logo-wrapper">
+            <h1 class="float_left"><a href="./mz-index.html"></a></h1>
+            <ul class="header_bread float_left clearfix">
+                <li class="header_bred_block active">购物车</li>
+                <li class="header_bred_block">确认订单</li>
+                <li class="header_bred_block">在线支付</li>
+                <li class="header_bred_block">完成</li>
+            </ul>
+            <ul class="header_right float_right clearfix">
+                <li class="header_bred_right_item">
+                    <a href="#" class="header_bred_right_link" target="_blank">我的订单</a>
+                </li>
+                <li class="header_bred_right_item signin btn">
+                    <a href="./mz-login.html" class="header_bred_right_link" target="_blank">登录</a>
+                </li>
+                <li class="header_bred_right_item signin btn">
+                    <a href="./mz-register.html" class="header_bred_right_link" target="_blank">注册</a>
+                </li>
+                <li class="header_member signout">
+                    <a href="#" class="header_member_link" target="_blank">
+                        <span class="header_member_username" id="toBarUser"></span>
+                        的商城
+                        <i class="header_member_triangle"></i>
+                    </a>
+                    <ul class="header_member_menu">
+                        <li class="header_member_menu_item"><a href="#" target="_blank"
+                                class="header_member_menu_link">地址管理</a></li>
+                        <li class="header_member_menu_item"><a href="#" target="_blank"
+                                class="header_member_menu_link">我的收藏</a></li>
+                        <li class="header_member_menu_item"><a href="#" target="_blank"
+                                class="header_member_menu_link">我的回购金</a></li>
+                        <li class="header_member_menu_item"><a href="#" target="_blank"
+                                class="header_member_menu_link">问题反馈</a></li>
+                        <li class="header_member_menu_item"><a
+                                class="header_member_menu_link exit">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- cartBox -->
+    <div class="cart" id="cart">
+        <div class="cart_login_tips" id="cartLoginTips">
+            <i class="cart_login_tips_icon"></i>
+            您还没有登录！登录后可显示您账号中已加入的商品哦~
+            <a href="./mz-login.html" target="_blank" class="mz-btn s success">去登录</a>
+            <div class="close_tips" id="closeTips"></div>
+        </div>
+        <!-- 有商品 -->
+        <div class="mzcontainer hasGoods signout">
+            <table class="cart_header">
+                <tr>
+                    <td class="cart_col_select">
+                        <div class="cart_select_all selectAll">
+                            <div class="mz-checkbox"></div>
+                            <span class="cart_select_title">全选</span>
+                        </div>
+                    </td>
+                    <td class="cart_col_price">单价(元)</td>
+                    <td class="cart_col_num">数量</td>
+                    <td class="cart_col_total">小计(元)</td>
+                    <td class="cart_col_ctrl" id="cartCtrl">编辑</td>
+                </tr>
+            </table>
+            <ul class="cart_merchant_list">
+                <li class="cart_merchant">
+                    <div class="cart_merchant_header">
+                        <div class="cart_select_all">
+                            <div class="mz-checkbox"></div>
+                            <span class="cart_select_title">魅族</span>
+                        </div>
+                        <div class="cart_select_feeunFreeshipping">
+                            <span class="cart_free">已免运费</span>
+                            <div>
+                                <p>
+                                    再买
+                                    <span class="cart_shipping_price">80.00</span>
+                                    元，即可免运费
+                                </p>
+                                <span class="free_shipping_skip">
+                                    立即凑单 >
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="cart_merchant_body"> 
+                    </table>
+                </li>
+            </ul>
+        </div>
+        <!-- 没有商品 -->
+        <div class="mzcontainer signout noGoods">
+            <div class="cart-empty login">
+                <div class="cart-empty-content">
+                    <div class="cart-empty-left"></div>
+                    <div class="cart-empty-right">
+                        <div class="cart-empty-title">
+                            购物车内还没有商品，赶紧去选购吧
+                        </div>
+                        <div class="tips-btn">
+                            <a href="./mz-index.html" class="mz-btn primary">
+                                返回商城首页
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 没有登录-->
+        <div class="mzcontainer signout noLogin">
+            <div class="cart-empty">
+                <div class="cart-empty-content">
+                    <div class="cart-empty-left"></div>
+                    <div class="cart-empty-right">
+                        <div class="cart-empty-title">
+                            您还没有登录！
+                        </div>
+                        <div class="cart-empty-desc">
+                            登录后可显示您账号中已加入的商品哦~
+                        </div>
+                        <div class="tips-btn">
+                            <a href="./mz-login.html" class="mz-btn success l">
+                                去登录
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart_footer signout" id="cartFooter">
+            <div class="mzcontainer">
+                <div class="cart_footer_left float_left">
+                    <div class="cart_select_all selectAll">
+                        <div class="mz-checkbox"></div>
+                        <span class="cart_select_title">全选</span>
+                    </div>
+                    <span class="cart_remove_selected">
+                        删除选中的商品
+                    </span>
+                    <span class="cart_footer_count">
+                        共
+                        <span class="cart_footer_num" id="cartNum">0</span>
+                        件商品，已选择
+                        <span class="cart_footer_num blue" id="totalSelectedCount">0</span>
+                        件
+                    </span>
+                </div>
+                <div class="cart_footer_right float_right">
+                    <span class="cart_footer_sum">
+                        已优惠
+                        <span class="cart_footer_num red" id="tatalDiscount">0.00</span>
+                        元，合计（不含运费）:
+                        <span class="cart_footer_total" id="totalPrice">0.00</span>
+                    </span>
+                    <div class="mz-btn success to-order-btn" disabled>去结算</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer-wrap clearfix">
+            <div class="footer_links clearfix">
+                <ul class="footer-service float_left">
+                    <li>
+                        <a href="#">
+                            <i class="iconfont iconSF"></i>
+                            <span>满80免运费</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="iconfont iconshandian"></i>
+                            <span>100+ 城市次日送达</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="iconfont iconhezi"></i>
+                            <span>7天无理由退货</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="iconfont iconshiwutianhuanhuo"></i>
+                            <span>15天换货保障</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="iconfont iconquanbaoxiu"></i>
+                            <span>1年免费保修</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="iconfont iconfang"></i>
+                            <span>上门快修</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hotline float_right">
+                    <span>周一至周日 8:00-20:00</span>
+                    <p class="tel">400-788-3333</p>
+                    <a href="#" class="online_btn">
+                        在线客服
+                    </a>
+                </div>
+            </div>
+            <hr class="footer_hr">
+            <div class="footer_co">
+                <div class="info_left float_left">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#">了解魅族</a>
+                        </li>
+                        <li>
+                            <a href="#">加入我们</a>
+                        </li>
+                        <li>
+                            <a href="#">联系我们</a>
+                        </li>
+                        <li>
+                            <a href="#">Flyme</a>
+                        </li>
+                        <li>
+                            <a href="#">魅族社区</a>
+                        </li>
+                        <li>
+                            <a href="#">天猫旗舰店</a>
+                        </li>
+                        <li>
+                            <a href="#">问题反馈</a>
+                        </li>
+                        <li>
+                            <a href="#">线上销售授权名单公示</a>
+                        </li>
+                        <li>
+                            <a href="#">出版物经营许可证</a>
+                        </li>
+                        <li class="border_0 lang_wp">
+                            <span class="footer_language">
+                                <a href="#">
+                                    <i class="iconfont iconguoqi"></i>
+                                    简体中文
+                                </a>
+                            </span>
+                            <div class="modal_lang_body">
+                                <ul class="lang_list">
+                                    <li class="footerLi">
+                                        <a href="#">
+                                            <i class="lang_logo" style="background-image:url(img/china.png)"></i>
+                                            简体中文
+                                        </a>
+                                    </li>
+                                    <li class="footerLi">
+                                        <a href="#">
+                                            <i class="lang_logo" style="background-image:url(./img/fanwen.png)"></i>
+                                            繁體中文
+                                        </a>
+                                    </li>
+                                    <li class="footerLi">
+                                        <a href="#">
+                                            <i class="lang_logo" style="background-image:url(./img/EN.png)"></i>
+                                            English
+                                        </a>
+                                    </li>
+                                    <li class="footerLi">
+                                        <a href="#">
+                                            <i class="lang_logo" style="background-image:url(./img/els.png)"></i>
+                                            Русский
+                                        </a>
+                                    </li>
+                                    <li class="footerLi">
+                                        <a href="#">
+                                            <i class="lang_logo" style="background-image:url(./img/trq.png)"></i>
+                                            Türkiye
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="footer_certificate">
+                        &copy;2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.
+                        &nbsp;&nbsp;
+                        <a href="#" target="_blank">粤ICP备13003602号</a>
+                        <a href="#" target="_blank">合字B2-20170010 </a>
+                        <a href="#" target="_blank">营业执照</a>
+                        <a href="#" target="_blank">法律声明</a>
+                        <span class="footer_record">
+                            <i></i>
+                            粤公网安备 44049102496009 号
+                        </span>
+                        <a href="#" target="_blank" class="footer_license">
+                            <i></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer_wel">
+                            <i></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer_trust">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="info_right float_right">
+                    <a href="#" target="_blank">
+                        <img src="img/ewm.png" alt="" class="ewm">
+                        <i class="right_img info_img"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="img/wx.jpg" alt="" class="wx">
+                        <i class="iconfont iconiconfont info_img"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="iconfont iconqqkongjian info_img"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="iconfont iconiconfonticonfontweibo"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- layout-magnet -->
+    <div class="layout-magnet" style="bottom:100px;">
+        <ul class="layout-magnet-list">
+            <li class="layout-magnet-item layout-magnet-item-app">
+                <a href="javascript:void(0)" class="layout-magnet-link" target="_blank">
+                    <div class="layout-magnet-icon">
+                        <i class="layout-font layout-font-app"></i>
+                    </div>
+                    <div class="layout-magnet-text">&nbsp;</div>
+                    <div class="layout-magnet-download">
+                        <div class="layout-magnet-download-body">
+                            <img src="img/mzapp.png" alt="" class="layout-magnet-download-qrcode">
+                            <p class="layout-magnet-download-text">扫码下载魅族商城APP</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="layout-magnet-item layout-magnet-item-top">
+                <a href="javascript:void(0)" class="layout-magnet-link">
+                    <div class="layout-magnet-icon">
+                        <i class="layout-font layout-font-top iconfont iconarrow-up"></i>
+                    </div>
+                    <div class="layout-magnet-text" id="goBcak">回到顶部</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- mz-mask -->
+    <!-- 确认此删除商品 -->
+    <div class="mz-mask hide">
+        <div class="mz-dialog dialog">
+            <div class="mz-dialog-header">
+                <div class="mz-dialog-title">删除</div>
+                <div class="mz-dialog-close"></div>
+            </div>
+            <div class="mz-dialog-main">
+                <div class="mz-dialog-wrap">
+                    <div class="mz-dialog-content">您确定要删除该商品吗？</div>
+                </div>
+            </div>
+            <div class="mz-dialog-bottom">
+                <div class="mz-btn cancel">删除</div>
+                <div class="mz-btn success">取消</div>
+            </div>
+        </div>
+    </div>
+    <!-- 提示 -->
+    <div class="mz-mask hide">
+        <div class="mz-dialog tips">
+            <div class="mz-dialog-header">
+                <div class="mz-dialog-title">提示</div>
+                <div class="mz-dialog-close"></div>
+            </div>
+            <div class="mz-dialog-main">
+                <div class="mz-dialog-wrap">
+                    <div class="mz-dialog-content"></div>
+                </div>
+            </div>
+            <div class="mz-dialog-bottom">
+                <div class="mz-btn success">确定</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/jquery.js"></script>
+<script type="module" src="./js/shopcart/shopcart.js"></script>

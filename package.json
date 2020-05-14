@@ -1,0 +1,22 @@
+{
+  "name": "nz2001mz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/li-hahah/nz2001mz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/li-hahah/nz2001mz/issues"
+  },
+  "homepage": "https://github.com/li-hahah/nz2001mz#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

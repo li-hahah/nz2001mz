@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="">
+        <div class="logo-wrapper">
+            <h1 class="float_left"><a href="./mz-index.html"></a></h1>
+        </div>
+    </header>
+    <!-- banner-box -->
+    <div id="banner">
+        <div class="main_form phone">
+            <div class="table_title">
+                <a href="#" class="linkABlack" id="toAccountLogin">
+                    账号登录
+                </a>
+                <span class="register_line"></span>   
+                <a href="#" class="linkAGray" id="toVcodeLogin">
+                    二维码登录
+                </a>
+            </div>
+            <div class="tip_box visibility-hidden">
+                <i class="err_icon"></i>
+                <span class="tip_font"></span>
+                <span class="close_icon"></span>
+            </div>
+            <div class="normalInput username">
+                <input type="text" placeholder="手机号/ Flyme 账号" maxlength="50" id="userphone" class="username">
+            </div>
+            <div class="normalInput userpass">
+                <input type="password" placeholder="密码" maxlength="50" id="userpass" class="username">
+            </div>
+            <a href="#" id="login" class="fullBtnBlue">登录</a>
+            <div class="transferField clearfix">
+                <a href="#" target="_blank" class="float_right linkABlue rememberFieldForA">忘记密码?</a>
+                <a href="./mz-register.html" target="_blank" class="goRegister linkABlue">注册</a>
+            </div>
+            <a href="javascript:void(0)" class="qr-btn qr-phone" id="qr-btn"></a>
+            <div class="qr-panel hide" id="qr-panel">
+                <div class="qr_imgBox">
+                    <img src="img/qr.jpg" alt="">
+                </div>
+                <p class="tips">请使用账号中心右上角或最新的Flyme系统相机扫码功能，扫码登录</p>
+            </div>
+        </div>
+        <div class="main_form pc hide">
+            <div class="table_title">
+                <h3 id="toAccountLogin">验证码登录</h3>
+            </div>
+            <div class="tip_box visibility-hidden">
+                <i class="err_icon"></i>
+                <span class="tip_font"></span>
+                <span class="close_icon"></span>
+            </div>
+            <div class="normalInput username">
+                <input type="text" placeholder="手机号码" maxlength="50" id="username" class="username">
+            </div>
+            <div class="pc_blue"><a href="#" class="hide">普通登录</a></div>
+            <a href="#" id="login" class="fullBtnBlue">登录</a>
+            <div class="transferField clearfix">
+                <a href="#" target="_blank" class="float_right linkABlue rememberFieldForA">忘记密码?</a>
+                <a href="./mz-register.html" target="_blank" class="goRegister linkABlue">注册</a>
+            </div>
+            <a href="javascript:void(0)" class="qr-btn qr-pc" id="qr-btn"></a>
+            <div class="qr-panel hide" id="qr-panel">
+                <div class="qr_imgBox">
+                    <img src="img/qr.jpg" alt="">
+                </div>
+                <p class="tips">请使用账号中心右上角或最新的Flyme系统相机扫码功能，扫码登录</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer-wrap">
+            <div class="footerInner">
+                <div class="footer-layer">
+                    <div class="footer-inner float_left">
+                        <a href="#" target="_blank" title="关于魅族">关于魅族</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <a href="#" target="_blank" title="工作机会">工作机会</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <a href="#" target="_blank" title="联系我们">联系我们</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <a href="#" target="_blank" title="法律声明">法律声明</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <a href="#" target="_blank" title="常见问题">常见问题</a>
+                        <img src="img/space.gif" alt="" class="foot-line">
+                        <div class="footer_language" title="简体中文">
+                            简体中文&nbsp;&nbsp;&nbsp;
+                            <div class="footer_language_menu">
+                                <a href="#" title="简体中文" class="checked">简体中文</a>
+                                <a href="#" title="English" class="ClobalItem">English</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-service float_left">
+                        <span class="service_label">客服热线</span>
+                        <span class="service_num">400-788-3333</span>
+                        <a href="#" class="service_online" title="在线客服">在线客服</a>
+                    </div>
+                    <div class="footer-outerLink float_right">
+                        <a href="#" class="foot_sina">
+                            <i class="i_icon"></i>
+                        </a>
+                        <a href="#" class="foot_wechat">
+                            <i class="i_icon"></i>
+                            
+                        </a>
+                        <img src="img/weixin.png" alt="">
+                        <a href="#" class="foot_qzone">
+                            <i class="i_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="flymeCopy">
+                    <div class="flymeInner">
+                        <span>
+                            &copy;2020 Meizu Telecom Equipment Co., Ltd. All rights reserved.
+                        </span>
+                        <a href="#" class="linkAGray">备案号: 粤ICP备13003602号-4</a>
+                        <a href="#" class="linkAGray">经营许可证编号: 粤B2-20130198</a>
+                        <a href="#" class="linkAGray">营业执照</a>
+                        <a href="#" class="linkAGray aa">粤公网安备 44049102496076号</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- tips -->
+    <div class="mz-mask hide">
+        <div class="mz-dialog dialog">
+            <div class="mz-dialog-header">
+                <div class="mz-dialog-title">提示</div>
+                <div class="mz-dialog-close"></div>
+            </div>
+            <div class="mz-dialog-img">
+                <div class="dialog-img">
+                    <i class="iconfont icongou"></i>
+                </div>
+            </div>
+            <div class="mz-dialog-main">
+                <div class="mz-dialog-wrap">
+                    <div class="mz-dialog-content">恭喜您登录成功，点击去<a href="./mz-index.html" class="linkABlue">首页</a>吧
+                        <em>5</em>秒后自动转跳</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./js/jquery.js"></script>
+<script type="module" src="./js/login/login.js"></script>

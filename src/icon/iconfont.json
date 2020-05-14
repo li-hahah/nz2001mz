@@ -1,0 +1,212 @@
+{
+  "id": "1794415",
+  "name": "魅族",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3417852",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "1855920",
+      "name": "叉",
+      "font_class": "cha",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "10029674",
+      "name": "三",
+      "font_class": "san",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "4567311",
+      "name": "Flyme logo",
+      "font_class": "Flymelogo",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "2564299",
+      "name": "问号",
+      "font_class": "wenhao",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "6504378",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e6ed",
+      "unicode_decimal": 59117
+    },
+    {
+      "icon_id": "8740141",
+      "name": "下箭头",
+      "font_class": "arrow_down",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "1418469",
+      "name": "勾",
+      "font_class": "gou",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "3294567",
+      "name": "收 藏",
+      "font_class": "shoucang",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "12047288",
+      "name": "对比",
+      "font_class": "duibi",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "2506063",
+      "name": "上箭头",
+      "font_class": "arrow-up",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "2452421",
+      "name": "英语",
+      "font_class": "yingyu",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "6021458",
+      "name": "俄罗斯",
+      "font_class": "eluosi",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "8765548",
+      "name": "香港",
+      "font_class": "xianggang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "10589535",
+      "name": "土耳其",
+      "font_class": "tuerqi",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "1518015",
+      "name": "播放",
+      "font_class": "bofang1",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "420033",
+      "name": "十五天换货",
+      "font_class": "shiwutianhuanhuo",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "503733",
+      "name": "微博",
+      "font_class": "iconfonticonfontweibo",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "512028",
+      "name": "微信",
+      "font_class": "iconfont",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "521533",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "970753",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "1101256",
+      "name": "QQ空间",
+      "font_class": "qqkongjian",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "2992693",
+      "name": "盒子",
+      "font_class": "hezi",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "3594468",
+      "name": "中国国旗",
+      "font_class": "guoqi",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "4682500",
+      "name": "SF",
+      "font_class": "SF",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "4927423",
+      "name": "全保修",
+      "font_class": "quanbaoxiu",
+      "unicode": "e74b",
+      "unicode_decimal": 59211
+    },
+    {
+      "icon_id": "4933341",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e735",
+      "unicode_decimal": 59189
+    },
+    {
+      "icon_id": "7262188",
+      "name": "房",
+      "font_class": "fang",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "12738863",
+      "name": "闪电",
+      "font_class": "shandian",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    }
+  ]
+}
