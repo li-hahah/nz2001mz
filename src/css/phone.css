@@ -99,6 +99,7 @@ h1 a{
     margin: 8px 0;
     width: 560px;
     height: 560px;
+    position: relative;
 }
 .preview-thumb{
     overflow: hidden;

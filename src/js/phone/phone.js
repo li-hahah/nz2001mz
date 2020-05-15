@@ -427,12 +427,103 @@ function showGoods(data,cookiename){
     if($(".single").hasClass("selected")){
         $("#J_packageContent").removeClass(" hide")
     }
+    new Mirror($(".preview-booth"),{
+        img:`${$("#imgbooth img").attr("src")}`,
+        multiple:2,
+        width:200,
+        height:200,
+        color:"blue"
+    })
 }
 function selected(){
     $("#property a").click(function(){
         $(this).parent().find("a").removeClass(" selected");
         $(this).addClass(" selected");
     })
+}
+
+class Mirror{
+    constructor($selected,obj){
+        this.$box = $($selected);
+        let defaultObj = {
+            width:100,
+            height:100,
+            multiple:3,
+            opacity:0.3,
+            color:"red",
+            top:0,
+            left:0,
+            img:""
+        }
+        for(let key in defaultObj){
+            this[key] = obj[key]==undefined?defaultObj[key]:obj[key];
+        }
+        this.createDom();
+        this.addEvent();
+
+    }
+    createDom(){
+        let htmlStr = '';
+        htmlStr +=`
+            <div class="mirror" style="
+                    position:absolute;
+                    left:${this.left}px;
+                    top:${this.top}px;
+                    width:${this.width}px;
+                    height:${this.height}px;
+                    opacity:${this.opacity};
+                    display:none;
+                    background:${this.color}
+            ">
+            </div>
+        `;
+        htmlStr +=`
+            <div class="mirrorView" style="
+                    position:absolute;
+                    left:${this.$box.innerWidth()+20}px;
+                    top:0px;
+                    width:${this.width*this.multiple}px;
+                    height:${this.height*this.multiple}px;
+                    background-image:url(${this.img});
+                    background-size:${this.$box.innerWidth()*this.multiple}px ${this.$box.innerHeight()*this.multiple}px;
+                    background-position:-${this.left*this.multiple}px -${this.top*this.multiple}px
+                    display:none;
+                    z-index:999;
+                    border-radius:2px;
+                    box-shadow:0 0 100px #ccc;
+            ">
+            </div>
+        `;
+        $(".preview-booth").append(htmlStr);
+    }
+    addEvent(){
+        this.$box.mousemove((ev)=>{
+            $(".mirror,.mirrorView").css("display","block");
+            this.left = ev.pageX - this.$box.offset().left - (this.width/2);
+            this.top = ev.pageY - this.$box.offset().top - (this.height/2);
+            if(this.left<0){
+                this.left=0;
+            }else if(this.left+this.width>this.$box.innerWidth()){
+                this.left=this.$box.innerWidth()-this.width;
+            }
+            if(this.top<0){
+                this.top=0;
+            }else if(this.top+this.height>this.$box.innerHeight()){
+                this.top=this.$box.innerHeight()-this.width;
+            }
+
+            $(".mirror").css({
+                "left":`${this.left}px`,
+                "top":`${this.top}px`
+            })
+            $(".mirrorView").css({
+                "background-position":`-${this.left*this.multiple}px -${this.top*this.multiple}px`
+            })
+        })
+        this.$box.mouseleave(()=>{
+            $(".mirror,.mirrorView").css("display","none");
+        })
+    }
 }
 $(function(){
     let name = h.getCookie();
