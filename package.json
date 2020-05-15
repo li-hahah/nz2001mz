@@ -17,10 +17,15 @@
   },
   "homepage": "https://github.com/li-hahah/nz2001mz#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.1"
   }
 }
