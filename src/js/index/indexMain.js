@@ -5,8 +5,7 @@ import Slider from "../bannerShow.js";
 function getGoodsType(){
     $.get("./php/getGoodsType.php",function(datas){
         datas.forEach(item=>{
-            getPhone(item.typeId);
-            getNavGoods(item.typeId)
+            getPhone(item.typeId)
         })
     },"json")
 }
@@ -79,56 +78,6 @@ function showPhone(datas,typeId){
 }
 //显示商品E
 // headerNav S
-function getNavGoods(typeId){
-    $.get("./php/getGoodsListNew.php",{
-        "typeId":typeId,
-        "count":8
-    },function(datas){
-        let subBox = '';
-        for(let i=0;i<$(".logo_nav").children().length;i++){
-            subBox +=`
-                <div class="mz_header_sub">
-                    <div class="mz_wrap">
-                        <ul></ul>
-                    </div>
-                </div>
-            `;      
-        }
-        $(".mz_header_sub_show").append(subBox);
-        nav(datas,typeId)
-    },"json")
-}
-function nav(datas,typeId){
-    typeId = typeId.substr(2,)-1;
-    let htmlStr ='';
-    let subBox =`
-        <div class="app_down_content">
-            <img src="img/app-down.jpg" alt="">
-            <a href="#" class="app_down_link app_down_link2">
-                <img src="img/Android.png" alt="">
-            </a>
-            <a href="#" class="app_down_link app_down_link3">
-                <img src="img/Android.png" alt="">
-            </a>
-        </div>
-    `;  
-    datas.forEach(item=>{
-        if(item.goodsId.substr(1,)!="00"){
-            htmlStr += `
-                <li>
-                    <a href="./mz-phone.html?goodsId=${item.goodsId}" class="mz_sub_a">
-                        <img src="${item.goodsImg}" alt="" class="header_product_img">
-                        ${item.goodsName}
-                        <span></span>
-                        <em>￥${item.goodsPrice}</em>
-                    </a>
-                </li>
-            `;
-        }
-    })
-    $(".mz_header_sub_show .mz_header_sub:lt(4)").eq(typeId).find("ul").append(htmlStr);
-    $(".mz_header_sub_show .mz_header_sub").last().html(subBox);
-}
 //  headerNav S
 
 $(function(){

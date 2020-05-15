@@ -288,15 +288,15 @@ function showGoods(data,cookiename){
             <dl class="property-set-sale clearfix">
                 <dt class="vm-metatit">颜色分类</dt>
                 <dd class="clear">
-                    <a href="#" class="vm-sale-img selected" title="鲸跃蓝">
+                    <a href="javascript:void(0);" class="vm-sale-img selected" title="鲸跃蓝">
                         <img src="${data.goodsImg}" alt="" width="32" height="32">
                         <span>鲸跃蓝</span>
                     </a>
-                    <a href="#" class="vm-sale-img selected" title="湖光绿">
+                    <a href="javascript:void(0);" class="vm-sale-img" title="湖光绿">
                         <img src="${data.goodsImg}" alt="" width="32" height="32">
                         <span>湖光绿</span>
                     </a>
-                    <a href="#" class="vm-sale-img selected" title="日光橙">
+                    <a href="javascript:void(0);" class="vm-sale-img" title="日光橙">
                         <img src="${data.goodsImg}" alt="" width="32" height="32">
                         <span>日光橙</span>
                     </a>
@@ -305,13 +305,13 @@ function showGoods(data,cookiename){
             <dl class="property-set-sale clearfix">
                 <dt class="vm-metatit">内存容量</dt>
                 <dd class="clear">
-                    <a href="#" class="selected" title="6+128GB">
+                    <a href="javascript:void(0);" class="selected" title="6+128GB">
                         <span>6+128GB</span>
                     </a>
-                    <a href="#" title="8+128GB">
+                    <a href="javascript:void(0);" title="8+128GB">
                         <span>8+128GB</span>
                     </a>
-                    <a href="#" title="8+256GB">
+                    <a href="javascript:void(0);" title="8+256GB">
                         <span>8+256GB</span>
                     </a>
                 </dd>
@@ -320,10 +320,10 @@ function showGoods(data,cookiename){
                 <dt class="vm-metatit">选择套餐</dt>
                 <dd class="package">
                     <div class="package-tab clearfix" id="J_packageTab">
-                        <a href="#" class="single selected" title="官方标配">
+                        <a href="javascript:void(0);" class="single selected" title="官方标配">
                             <p class="vm-text">官方标配</p>
                         </a>
-                        <a href="#" class="single" title="EP3C套餐">
+                        <a href="javascript:void(0);" class="single" title="EP3C套餐">
                             <p class="vm-text">EP3C套餐
                                 <span class="vm-text-profits">
                                     省
@@ -332,10 +332,10 @@ function showGoods(data,cookiename){
                                 </span>
                             </p>
                         </a>
-                        <a href="#" class="single" title="碎屏保套餐">
+                        <a href="javascript:void(0);" class="single" title="碎屏保套餐">
                             <p class="vm-text">碎屏保套餐</p>
                         </a>
-                        <a href="#" class="single" title="牙刷套餐">
+                        <a href="javascript:void(0);" class="single" title="牙刷套餐">
                             <p class="vm-text">牙刷套餐
                                 <span class="vm-text-profits">
                                     省
@@ -372,20 +372,20 @@ function showGoods(data,cookiename){
         <div class="property-huabei clearfix">
             <div class="vm-metatit">
                 花呗分期
-                <a href="#" target="_blank" class="vm-desc">
+                <a href="javascript:void(0);" target="_blank" class="vm-desc">
                     <i class="iconfont iconwenhao"></i>
                 </a>
             </div>
             <div class="property-huabei-bd" id="J_huabeiBody">
-                <a href="#" class="prop">
+                <a href="javascript:void(0);" class="prop">
                     <span class="vm-periods">¥766.33×3期</span>
                     <span class="vm-rate">免手续费</span>
                 </a>
-                <a href="#" class="prop">
+                <a href="javascript:void(0);" class="prop">
                     <span class="vm-periods">¥400.40×6期</span>
                     <span class="vm-rate">含手续费 ￥17.24/期</span>
                 </a>
-                <a href="#" class="prop">
+                <a href="javascript:void(0);" class="prop">
                     <span class="vm-periods">¥205.94×12期</span>
                     <span class="vm-rate">含手续费 ￥14.36/期</span>
                 </a>
@@ -423,6 +423,16 @@ function showGoods(data,cookiename){
         console.log(count);
         addToCart(cookiename,count,data.goodsId)
     })
+    selected();
+    if($(".single").hasClass("selected")){
+        $("#J_packageContent").removeClass(" hide")
+    }
+}
+function selected(){
+    $("#property a").click(function(){
+        $(this).parent().find("a").removeClass(" selected");
+        $(this).addClass(" selected");
+    })
 }
 $(function(){
     let name = h.getCookie();
@@ -435,7 +445,7 @@ $(function(){
     h.headerSub();
     $(window).scroll(function(){
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        siteGgoTopShow(scrollTop);
+        siteGotop(scrollTop);
         fixed(scrollTop);
     })
     $(".gotop-arrow").click(function(){

@@ -2,17 +2,17 @@ function register(){
     let isRight = [];
     //前端验证
     function checkUser(){
-        let reg = /^\d{11}/;
+        let reg = /^[\d\w]{6,11}/;
         if(reg.test($("#userphone").val())){
             $(".username .no").addClass("hide");
-            $(".tip_box").addClass("visibility-hidden");
+            $(".txt1").addClass("visibility-hidden");
             isRight[0] = 1;
             return true;
         }else{
             $(".username .no").removeClass("hide");
             $(".username .yes").addClass("hide");
-            $(".tip_box").removeClass("visibility-hidden");
-            $(".tip_font").html("请输入11位手机号呀，亲！！！");
+            $(".txt1").removeClass("visibility-hidden");
+            $(".txt1 span").html("请输入6-11位手机号或flyme账号呀，亲！！！");
             isRight[0] = 0;
             return false;
         }
@@ -27,9 +27,35 @@ function register(){
         }else{
             $(".password .no").removeClass(" hide");
             $(".password .yes").addClass(" hide");
-            $(".tip_box").removeClass(" visibility-hidden");
-            $(".tip_font").html("请输入6位以上的数字与字符的组合");
+            $(".txt2").removeClass(" visibility-hidden");
+            $(".txt2 span").html("请输入6位以上的数字与字符的组合");
             isRight[1] = 0;
+        }
+    }
+    function checkPass2(){
+        let reg = /^[a-zA-Z0-9]{6,}/;
+        if(reg.test($("#userpass2").val())){
+            $(".password2 .yes").removeClass(" hide");
+            $(".password2 .no").addClass(" hide");
+            $(".txt3").addClass(" visibility-hidden");
+            isRight[3] = 1;
+        }else{
+            $(".password2 .no").removeClass(" hide");
+            $(".password2 .yes").addClass(" hide");
+            $(".txt3").removeClass(" visibility-hidden");
+            $(".txt3 span").html("请输入6位以上的数字与字符的组合");
+            isRight[3] = 0;
+        }
+        if($("#userpass").val()==$("#userpass2").val()){
+            $(".password2 .yes").removeClass(" hide");
+            $(".password2 .no").addClass(" hide");
+            isRight[3] = 1;
+        }else{
+            $(".password2 .no").removeClass(" hide");
+            $(".password2 .yes").addClass(" hide");
+            $(".txt3").removeClass(" visibility-hidden");
+            $(".txt3 span").html("与上面密码不一样噢亲");
+            isRight[3] = 0;
         }
     }
     //后端验证
@@ -58,6 +84,12 @@ function register(){
     })
     $("#userpass").blur(function(){
         checkPass()
+        $("#userpass").change(function(){
+            checkPass2()
+        })
+    })
+    $("#userpass2").blur(function(){
+        checkPass2()
     })
     //注册
     $("#registerBtn").click(function(){
@@ -65,7 +97,7 @@ function register(){
         isRight.forEach(item=>{
             sum+= item;
         })
-        if(sum==3&&$(".checkboxPic").hasClass("check_chk")){
+        if(sum==4&&$(".checkboxPic").hasClass("check_chk")){
             $.ajax({
                 type:"post",
                 url:"php/register.php",

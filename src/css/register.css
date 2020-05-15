@@ -4,21 +4,19 @@ span{
 }
 .main_form{
     top: 12%;
-    padding: 72px 35px 20px;
+    padding: 20px 35px 20px;
 }
 .tip_box{
     margin-top: 26px;
     
 }
 .txt_box{
-    height:33px;
     padding:5px 0;
     color:#666;
     font-size: 12px;
 }
 .normalInput{
     line-height: 46px;
-    margin-bottom:36px;
     width: auto;
     border-radius:2px;
     display: block;
