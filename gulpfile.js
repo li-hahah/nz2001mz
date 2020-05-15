@@ -35,10 +35,10 @@ gulp.task("copy",async ()=>{
 gulp.task("default",()=>
     gulp.watch("./src/js/**/*",async ()=>{
         gulp.src(["./src/js/**/*","!./src/js/jquery.js"])
-        .pipe(babel({
-            presets:['@babel/env']
-        }))
-        .pipe(uglify())
+        // .pipe(babel({
+        //     presets:['@babel/env']
+        // }))
+        // .pipe(uglify())
         .pipe(gulp.dest("F:\\phpStudy_64\\phpstudy_pro\\WWW\\mz\\js"))
     })
 
