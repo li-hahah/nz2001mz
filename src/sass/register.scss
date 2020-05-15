@@ -1,0 +1,212 @@
+@charset "utf-8";
+span{
+    display: inline;
+}
+.main_form{
+    top: 12%;
+    padding: 20px 35px 20px;
+}
+.tip_box{
+    margin-top: 26px;
+    
+}
+.txt_box{
+    padding:5px 0;
+    color:#666;
+    font-size: 12px;
+}
+.normalInput{
+    line-height: 46px;
+    width: auto;
+    border-radius:2px;
+    display: block;
+    position: relative;
+}
+.normalInput span{
+    position: absolute;
+    top: 13px;
+    right: -25px;
+    width: 15px;
+    height: 15px;
+    display: inline-block ;
+    line-height: 15px;
+    text-align: center;
+}
+.normalInput .no{
+    border: 1px solid red;
+    border-radius: 50%;
+}
+.normalInput  .iconcha{    
+    color: red;
+    font-size: 10px;
+}
+.normalInput .icongou{
+    color: rgb(25, 161, 70);
+}
+/* rememberField */
+.rememberField{
+    margin-bottom:30px;
+    height:20px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+/* checkboxPic */
+.checkboxPic{
+    display:inline-block;
+    width: 18px;
+    height: 18px;
+    line-height:20px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.mzchkbox{
+    cursor: pointer;
+}
+.check_unchk i{
+    background:url(../img/ico_checkbox_unSelected.png) no-repeat center;
+    background-size:100% 100%;
+}
+.check_chk i{
+    background:url(../img/ico_checkbox_Selected.png) no-repeat center;
+    background-size:100% 100%;
+}
+.pointer{
+    cursor: pointer;
+}
+.registerBtn{
+    width: auto;
+    font-size: 14px;
+    display: block;
+    height: 46px;
+    line-height: 46px;
+}
+/* mz-mask */
+.mz-mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(153,153,153,.6);
+    z-index: 9999;
+    animation: .5s ease mask-show forwards 1;
+}
+@keyframes mask-show{
+    0%{
+        background-color:rgba(153,153,153,0)
+    }
+    100%{
+        background-color:rgba(153,153,153,.4)
+    }
+}
+.mz-dialog{
+    position: absolute;
+    width: 500px;
+    min-height: 240px;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: normal;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -120px;
+    animation: .5s ease dialog-show forwards 1;
+}
+@keyframes dialog-show{
+    0%{
+        opacity:0
+    }
+    100%{
+        opacity:1
+    }
+}
+.mz-dialog-header{
+    position: relative;
+    height: 50px;
+    color:#333;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #EFEFEF;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius:4px 4px 0 0;
+}
+.mz-dialog-header .mz-dialog-close{
+    position: absolute;
+    right: 26px;
+    top: 18px;
+    width:15px;
+    height:15px;
+    color: #BDBDBD;
+    cursor: pointer;
+    transition: .5s all;
+}
+.mz-dialog-header .mz-dialog-close::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background: url(../img/cha.png) no-repeat center;
+    background-size: 100%;
+    font-weight: bolder;
+}
+.mz-dialog .mz-dialog-main{
+    display: table;
+    padding: 30px;
+    padding-top: 0;
+    word-break: break-all;
+    word-wrap: break-word;
+    width: 440px;
+}
+.mz-dialog .mz-dialog-main .mz-dialog-wrap{
+    display: table-cell;
+    vertical-align: middle;
+    height:64px;
+    color:#999;
+    font-size: 14px;
+    line-height: 22px;
+}
+.dialog .mz-dialog-content,.tips .mz-dialog-content{
+    text-align: center;
+}
+.mz-dialog-content a{
+    font-size: 20px;
+}
+.mz-dialog  .mz-dialog-bottom{
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+.mz-dialog .cancel{
+    color: #999;
+    border-color: #EFEFEF;
+    background-color: #EFEFEF;
+}
+.mz-dialog .mz-dialog-bottom .mz-btn{
+    margin-right: 10px;
+}
+.mz-dialog .mz-dialog-bottom .mz-btn:last-child{
+    margin-right: 0;
+}
+.hide .mz-dialog{
+    display: none;
+}
+/* dialog-img */
+.mz-dialog-img{
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+}
+.dialog-img{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.dialog-img .icongou{
+    font-size: 100px;
+    color: green;
+}
